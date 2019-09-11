@@ -195,5 +195,28 @@ form.addEventListener('submit', function (event) {
             } 
         });
 
+    //Calc
+        let  persons = document.querySelectorAll('.counter-block-option')[0],
+            days = document.querySelectorAll('.counter-block-option')[1],
+            place = document.getElementById('select'),
+            totalValue = document.getElementById('total'),
+            personsSum = 0,
+            daysSum = 0,
+            total = 0;
+
+            totalValue.innerHTML = 0;
+
+            persons.addEventListener ('change', function() {
+                personsSum = persons.value;
+
+                if (days.value == '') {
+                    totalValue.innerHTML = 0;
+                } else {
+                    totalValue.innerHTML = total;
+                }
+
+            });
+                
+
 });
 
